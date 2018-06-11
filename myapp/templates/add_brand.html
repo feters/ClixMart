@@ -3,59 +3,45 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>ClixMart</title>
-  <!-- Bootstrap core CSS-->
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-  <!-- Page level plugin CSS-->
-  <link href="{% static 'vendor/datatables/dataTables.bootstrap4.css' %}" rel="stylesheet">
-  <!-- Custom styles for this template-->
-  <link href="{% static 'css/sb-admin.css' %}" rel="stylesheet">
+  {% include 'sider/header.html' %}
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-  {% include 'nav_bar.html' %}
-  <div class="content-wrapper">
+  {% include 'sider/nav_bar.html' %}
+  <div class="content-wrapper px-5 py-5">
     <div class="container-fluid">
       <!-- Title Section -->
       <div class="row container-fluid">
         <h1 style="font-family: Arial; font-weight: bold;">Add Brand</h1>
       </div>
-      <hr>
+      <hr><br>
       <form action="/action_page.php">
-        Brand Name <input type="text" name="Brand_name"><br>
-        Choose Item <br>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            Price <span class="input-group-text">$</span>
-          </div>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="row">
+          <div class="mb-3 col-2">Brand Name:</div>
+          <div class="mb-3 col"><input class="col-5" type="text" name="BrandName"></div>
         </div>
-        <br>
-  </div>
-        <input type="submit" value="Submit">
+        <div class="row">
+          <div class="mb-3 col-2">Choose Item:</div>
+          <div class="mb-3 col">
+            <select class="col-5" name="Items">
+              <option>Make a Selection</option>
+              <option>Fruit</option>
+              <option>Vegetable</option>
+              <option>Drinks</option>
+              <option>Sausage</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-2">Price</div>
+          <div class="mb-3"><span class="input-group-text">€</span></div>
+          <div class="mb-3"><input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"></div>
+        </div>
+        <button class="col-3 offset-md-2" type="submit" style="background-color: #ff66cc;"><font color="white">Add</font></button>
       </form>
     </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <footer class="sticky-footer">
-      <div class="container">
-        <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
-        </div>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
+    {% include 'sider/footer.html' %}
     <!-- Logout Modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -74,7 +60,7 @@
         </div>
       </div>
     </div>
-    {% include 'inc_scripts.html' %}
+    {% include 'sider/inc_scripts.html' %}
   </div>
 </body>
 

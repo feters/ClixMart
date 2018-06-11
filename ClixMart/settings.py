@@ -86,6 +86,26 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dbi341965',
+#         'USER': 'dbi341965',
+#         'PASSWORD': 'Fontys123',
+#         'HOST': 'https://phpmyadmin.hera.fhict.nl/sql.php?server=1&db=dbi341965&table=tracking&pos=0&token=8f2d84fd769b68409a75725b988880a8',
+#         'PORT': '5432',
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'OPTIONS': {
+#             'read_default_file': '/path/to/my.cnf',
+#         },
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
